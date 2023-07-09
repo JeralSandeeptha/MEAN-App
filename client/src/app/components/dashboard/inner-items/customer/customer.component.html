@@ -1,0 +1,48 @@
+<div class="customer">
+  <div class="customer-inner">
+    <div class="new-customer-btn-section">
+      <button class="btn">+ New Customer</button>
+    </div>
+    <div class="add-customer-section">
+      <form [formGroup]="customerForm" (ngSubmit)="saveCustomer()">
+        <div class="formControl">
+          <input type="text" placeholder="Customer Name" formControlName="customerName">
+        </div>
+        <div class="formControl">
+          <input type="text" placeholder="Customer Address" formControlName="customerAddress">
+        </div>
+        <div class="formControl">
+          <input type="text" placeholder="Customer Salary" formControlName="customerSalary">
+        </div>
+        <div class="formControl">
+          <button [disabled]="customerForm.invalid" class="save-btn" type="submit" >{{selectedCustomer?'Update Customer':'Save Customer'}}</button>
+        </div>
+      </form>
+    </div>
+    <div class="customer-table-section">
+      <table class="customer-tbl">
+        <thead>
+          <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Address</td>
+            <td>Salary</td>
+            <td>Options</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let c of customerList">
+            <td>{{c._id}}</td>
+            <td>{{c.name}}</td>
+            <td>{{c.address}}</td>
+            <td>{{c.salary}}</td>
+            <td>
+              <button (click)="setUpdateData(c._id)">Update</button>
+              <button (click)="deleteCustomer(c._id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

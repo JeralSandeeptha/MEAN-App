@@ -1,0 +1,30 @@
+<div class="login">
+    <div class="login-inner">
+        <form [formGroup]="signupForm" (ngSubmit)="signup()" class="form">
+            <div class="formControl">
+                <h3>Sign Up</h3>
+            </div>
+            <div class="formControl">
+                <input formControlName="fullName" type="text" placeholder="Full Name">
+            </div>
+            <div class="formControl">
+                <input formControlName="email" type="email" placeholder="Email / Username">
+            </div>
+            <div class="formControl">
+                <input formControlName="password" type="password" placeholder="Password">
+            </div>
+            <div class="formControl">
+                <button class="login-btn" type="submit" [disabled]="signupForm.invalid">Sign Up</button>
+            </div>
+            <div class="formControl">
+                <hr/>
+            </div>
+            <div class="formControl">
+                <h5>Already have an Account ?</h5>
+            </div>
+            <div class="formControl">
+                <button routerLink="/login" class="signup-btn">Log In</button>
+            </div>
+        </form>
+    </div>
+</div>

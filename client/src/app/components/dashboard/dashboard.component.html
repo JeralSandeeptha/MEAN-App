@@ -1,0 +1,18 @@
+<div class="dashboard">
+  <div class="dashboard-inner">
+    <h1>Dashboard</h1>
+    <button (click)="logOut()">Log out</button>
+  </div>
+
+  <div class="button-pad">
+    <div class="button-pad-inner">
+      <button class="btn" routerLink="/dashboard/customers">Customer</button>
+      <button class="btn" routerLink="/dashboard/products">Products</button>
+      <button class="btn" routerLink="/dashboard/orders">Orders</button>
+      <button class="btn" routerLink="/dashboard/orderDetails">Order Details</button>
+    </div>
+  </div>
+
+  <router-outlet></router-outlet>
+
+</div>

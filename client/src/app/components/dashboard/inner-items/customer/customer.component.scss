@@ -1,0 +1,113 @@
+.customer{
+  width: 100%;
+  min-height: 71vh;
+  background-color: #6a0480;
+
+  .customer-inner{
+    max-width: 1200px;
+    min-height: 71vh;
+    margin: 0 auto;
+
+    .new-customer-btn-section{
+      min-height: 10vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      .btn{
+        border-radius: 0.25rem;
+        background-color: #5a136d;
+        height: 40px;
+        border: none;
+        padding: 10px;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+      }
+    }
+
+    .add-customer-section{
+      min-height: 10vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      form{
+        background-color: #9136ac;
+        border-radius: 0.25rem;
+        width: 500px;
+        padding: 25px 35px;
+
+        .formControl{
+
+          input{
+          border-radius: 0.25rem;
+            background-color: #A32CC4;
+            height: 40px;
+            width: 100%;
+            outline: none;
+            border: none;
+            padding: 10px;
+            color: white;
+            margin-bottom: 20px;
+
+            &::placeholder{
+              color: white;
+            }
+          }
+        }
+
+        .save-btn{
+          color: white;
+          border-radius: 0.25rem;
+          background-color: #400e4e;
+          height: 40px;
+          width: 100%;
+          border: none;
+          padding: 10px;
+          font-size: 16px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .customer-table-section{
+      min-height: 10vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 50px 0;
+
+      .customer-tbl{
+        width: 600px;
+        background-color: #40114d;
+        border-radius: 0.25rem;
+
+        thead{
+          height: 50px;
+
+          tr{
+
+            td{
+              color: white;
+            }
+          }
+        }
+
+        tbody{
+          height: 40px;
+          background-color: #6a0480;
+
+          tr{
+
+            td{
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
